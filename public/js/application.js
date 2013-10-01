@@ -6,6 +6,7 @@ $(document).ready(function() {
     $('#send_tweet').html("<img src='ajax-loader.gif'></img>");
 
     $.post('/tweetit', user_input, function(response){
+      console.log(user_input);
       console.log(response);
       $('#send_tweet').html(response);
     });
